@@ -1,0 +1,281 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: var(--light-bg);
+  padding-top: 80px;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+  color: white;
+  padding: 40px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  opacity: 0.8;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-content {
+  padding: 40px 20px;
+}
+
+.dashboard-actions {
+  margin-bottom: 30px;
+}
+
+.blogs-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blogs-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blogs-table thead {
+  background: var(--light-bg);
+}
+
+.blogs-table th {
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.blogs-table td {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.blogs-table tbody tr:hover {
+  background: var(--light-bg);
+}
+
+.blog-title-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.blog-title-cell strong {
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.blog-excerpt {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.published {
+  background: var(--success-color);
+  color: white;
+}
+
+.status-badge.draft {
+  background: var(--warning-color);
+  color: white;
+}
+
+.views-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-gray);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.edit-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.edit-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: var(--error-color);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.no-blogs {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-gray);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-form label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.blog-form input,
+.blog-form textarea {
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.blog-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-group label {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .blogs-table {
+    overflow-x: auto;
+  }
+
+  .blogs-table table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,214 @@
+.about-subsection {
+  margin-bottom: 60px;
+}
+
+.subsection-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-dark);
+}
+
+.subsection-icon {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.education-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.edu-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.education-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.edu-institution {
+  color: var(--text-gray);
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.edu-duration {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.edu-percentage {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.edu-status {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.certification-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+}
+
+.cert-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.certification-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.cert-issuer {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cert-date {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.cert-description {
+  color: var(--text-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.info-card {
+  padding: 40px;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+}
+
+.languages-list {
+  list-style: none;
+}
+
+.languages-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.languages-list li:last-child {
+  border-bottom: none;
+}
+
+.languages-list strong {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.languages-list span {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+.availability-info {
+  padding: 20px;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.availability-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.availability-arrangement {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .education-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 30px;
+  }
+}
